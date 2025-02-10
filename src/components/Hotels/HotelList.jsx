@@ -8,7 +8,7 @@ function HotelList() {
   const {userInfo} = useAuth();
   const [hotels , setHotels] = useState([])
   // const token = localStorage.getItem("authToken") 
-  function displayHotels() { axios.get(`http://localhost:8000/displayhotel/${userInfo.token}`).then((result)=>{
+  function displayHotels() { axios.get(`https://hotelbackend-1-qg3z.onrender.com/displayhotel/${userInfo.token}`).then((result)=>{
     setHotels(result.data.data)
     console.log(result.data.data)})
     .catch((error)=>{
@@ -17,7 +17,7 @@ function HotelList() {
   }
   function bookingHotel(hotelId){
   
-    axios.post(`http://localhost:8000/addbooking`,{hotelId , token : userInfo.token , date : Date.now()}).then((result) =>{
+    axios.post(`https://hotelbackend-1-qg3z.onrender.com/addbooking`,{hotelId , token : userInfo.token , date : Date.now()}).then((result) =>{
       navigate("/")
       console.log(result);
     }) .catch((error)=>{

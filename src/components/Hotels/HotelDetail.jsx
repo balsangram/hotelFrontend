@@ -18,7 +18,7 @@ function HotelDetail() {
     try {
       console.log("Submitting the form", data);
       const response = await axios.post(
-        `http://localhost:8000/addhotel `,{token : userInfo.token, ...data}
+        `https://hotelbackend-1-qg3z.onrender.com/addhotel `,{token : userInfo.token, ...data}
        
       );
       console.log(response.data);

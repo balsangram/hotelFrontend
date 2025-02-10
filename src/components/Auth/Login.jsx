@@ -17,7 +17,7 @@ function Login() {
   function onSubmit(data) {
     console.log("Submitting the form", data);
     axios
-      .post("http://localhost:8000/login", data)
+      .post("https://hotelbackend-1-qg3z.onrender.com/login", data)
       .then((result) => {
         console.log(result.data);
         login(result.data)

@@ -9,7 +9,7 @@ function BookingList() {
   // const token = localStorage.getItem("authToken") 
   // console.log(token);
   
-  function displayBooking() { axios.get(`http://localhost:8000/displaybooking/${userInfo.token}` ).then((result)=>{
+  function displayBooking() { axios.get(`https://hotelbackend-1-qg3z.onrender.com/displaybooking/${userInfo.token}` ).then((result)=>{
     setBookings(result.data.data)
     console.log(result.data.data);
   })
@@ -20,7 +20,7 @@ function BookingList() {
 
   function deleteBooking(booking) {
     axios
-      .delete(`http://localhost:8000/deletebooking/${booking._id}/${userInfo.token}`)
+      .delete(`https://hotelbackend-1-qg3z.onrender.com/deletebooking/${booking._id}/${userInfo.token}`)
       .then((result) => {
         console.log(result);
         setBookings((prevBookings) =>

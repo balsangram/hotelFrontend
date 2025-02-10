@@ -14,7 +14,7 @@ function Register() {
   function onSubmit(data) {
     console.log("Submitting the form", data);
     axios
-      .post("http://localhost:8000/registration", data)
+      .post("https://hotelbackend-1-qg3z.onrender.com/registration", data)
       .then((result) => {
         console.log(result);
         navigate("/login");

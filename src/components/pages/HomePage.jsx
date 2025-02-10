@@ -14,7 +14,7 @@ function HomePage() {
   useEffect(() => {
     const displayHotels = async () => {
       try {
-        const result = await axios.get(`http://localhost:8000/displayhotel/${userInfo.token}`);
+        const result = await axios.get(`https://hotelbackend-1-qg3z.onrender.com/displayhotel/${userInfo.token}`);
         setHotels(result.data.data);
       } catch (error) {
         console.error(error);

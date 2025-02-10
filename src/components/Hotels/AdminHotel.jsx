@@ -11,7 +11,7 @@ function AdminHotel() {
   // const token = localStorage.getItem("authToken");
   function displayHotels() {
     axios
-      .get(`http://localhost:8000/displayhotel/${userInfo.token}`)
+      .get(`https://hotelbackend-1-qg3z.onrender.com/displayhotel/${userInfo.token}`)
       .then(result => {
         setHotels(result.data.data);
         console.log(result.data.data);
@@ -22,7 +22,7 @@ function AdminHotel() {
   }
 
   function deleteHotel(hotel){
-    axios.delete(`http://localhost:8000/deletehotel/${hotel._id}/${userInfo.token}`).then((result)=>{
+    axios.delete(`https://hotelbackend-1-qg3z.onrender.com/deletehotel/${hotel._id}/${userInfo.token}`).then((result)=>{
       setHotels((prevBookings) =>
         prevBookings.filter((b) => b._id !== hotel._id)
       );

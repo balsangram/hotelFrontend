@@ -17,7 +17,7 @@ function ManageHotels() {
     try {
       console.log("Submitting the form", data);
       const response = await axios.put(
-        `http://localhost:8000/updatehotel/${id}/${userInfo.token}`,
+        `https://hotelbackend-1-qg3z.onrender.com/updatehotel/${id}/${userInfo.token}`,
         data
       );
       console.log(response.data);
