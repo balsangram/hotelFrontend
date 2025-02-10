@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import banner from '../../assets/banner.mp4';
+import banner from '../../assets/hotel.jpg';
 import Hotelimg from '../../assets/hotel.jpg'; // Placeholder image for hotels
 import { useAuth } from '../context/AuthContext';
 
@@ -36,13 +36,9 @@ function HomePage() {
     <div>
       {/* Video Banner with Overlay */}
       <div className="relative h-[95vh]">
-        <video
-          src={banner}
-          autoPlay
-          loop
-          muted
-          className="w-full h-full object-cover brightness-50"
-        />
+        
+        <img src={banner} alt="" 
+        className="w-full h-full object-cover brightness-50"/>
         <div className="absolute inset-0 flex items-center justify-center">
           <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold text-white">
             Welcome to Our Hotels
